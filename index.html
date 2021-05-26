@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,10 @@
     <link rel="stylesheet" href="/index.css">
     <title>Document</title>
 </head>
+
 <body>
+    <div class="cursor">
+    </div>
     <header class="header">
         <nav class="nav bd-container">
             <a href="#" class="logo">L I T E R A R Y</a>
@@ -18,42 +22,85 @@
         </nav>
     </header>
     <div class="menu">
-       <div class="menu-wrapper">
-        <div class="menu-items">
-            <ul>
-                <li>
-                    <a href="#">VỀ LITERARY</a>
-                </li>
-                <li>
-                    <a href="#">BỘ SƯU TẬP</a>
-                </li>
-                <li>
-                    <a href="#">TRIỂN LÃM</a>
-                </li>
-                <li>
-                    <a href="#">LIÊN HỆ</a>
-                </li>
-            </ul>
+        <div class="menu-wrapper">
+            <div class="cursor">
+            </div>
+            <div class="menu-items">
+                <ul>
+                    <li>
+                        <a href="#">VỀ LITERARY</a>
+                    </li>
+                    <li>
+                        <a href="#">BỘ SƯU TẬP</a>
+                    </li>
+                    <li>
+                        <a href="#">TRIỂN LÃM</a>
+                    </li>
+                    <li>
+                        <a href="#">LIÊN HỆ</a>
+                    </li>
+                </ul>
+            </div>
+            <i class='bx menu-close bx-x'></i>
         </div>
-        <i class='bx menu-close bx-x'></i>
-       </div>
     </div>
     <section class="l-main bd-container">
         <div class="wrap">
-           <div class="content">
+            <div class="content">
                 <img src="/Images/Nam Cao.jpg" alt="" class="img">
-            <div class="text">
-                <p class="desc">
-                    Nhà văn Nam Cao tên thật là Nguyễn Hữu Tri sinh ngày 20/10/1915, quê ở Lý Nhân, Hà Nam.
-                    Ông là một nhà văn hiện thực phê phán (trước Cách mạng)
-                    và được xem là một trong những nhà văn tiêu biểu nhất của thế kỉ XX.
-                </p>
+                <div class="text">
+                    <div class="line">
+                        <span>Nhà văn Nam Cao tên thật là Nguyễn Hữu Tri sinh ngày 20/10/1915, quê ở Lý Nhân, Hà
+                            Nam.</span>
+                    </div>
+                    <div class="line">
+                        <span> Ông là một nhà văn hiện thực phê phán (trước Cách mạng)</span>
+                    </div>
+                    <div class="line">
+                        <span>và được xem là một trong những nhà văn tiêu biểu nhất của thế kỉ XX.</span>
+                    </div>
+                </div>
+                <div class="sroll">
+                </div>
             </div>
-            <div class="sroll">
-            </div>
-           </div>
         </div>
     </section>
+    <section class="section-two">
+        <div class="bd-container bd-containertwo">
+            <div class="rectangle">
+            </div>
+            <div class="content-two">
+                <div class="content-text">
+                    <p class="text-sub">Tác Phẩm</p>
+                    <h3 class="text-title">Lão Hạc</h3>
+                    <p class="text-desc">
+                        Lão Hạc là một truyện ngắn của nhà văn Nam Cao được viết năm 1943.
+                        Tác phẩm được đánh giá là một trong những truyện ngắn tiêu biểu của dòng văn học hiện thực,
+                        nội dung truyện đã phần nào phản ánh được hiện trạng xã hội Việt Nam trong giai đoạn trước Cách
+                        mạng tháng Tám.
+                    </p>
+                    <p class="text-year">Xuất bản năm 1943</p>
+                </div>
+                <div class="grid-image">
+                    <img src="/Images/Lão Hạc 2.jpg" alt="" class="image-item image-one">
+                    <img src="/Images/Lão hạc 3.jpg" alt="" class="image-item image-two">
+                    <img src="/Images/Lão Hạc.jpg" alt="" class="image-item image-three">
+                </div>
+            </div>
+
+            <div class="rectangle">
+            </div>
+            <div class="text-scrolling">
+                <div>
+                    LITERARY <span>CONCEPT</span> LITERARY <span>CONCEPT</span>
+                    LITERARY <span>CONCEPT</span> LITERARY <span>CONCEPT</span>
+                    LITERARY <span>CONCEPT</span> LITERARY <span>CONCEPT</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
     <div class="intro">
         <div class="intro-text">
             <h1 class="intro-hide">
@@ -70,13 +117,15 @@
             </h1>
         </div>
     </div>
+
     <div class="slider"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
-    integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
+        integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="/index.js"></script>
 </body>
+
 </html>
