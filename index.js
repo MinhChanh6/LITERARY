@@ -20,7 +20,7 @@ tl1.to(".menu", 2, {
     top: "0%",
     ease: Expo.easeInOut,
 },
-    "-=0.4"
+    "-=0.1"
 );
 tl1.from(
     ".menu-close",
@@ -30,13 +30,13 @@ tl1.from(
         opacity: 1,
         ease: Expo.easeInOut,
     },
-    "-=.3"
+    "-=.2"
 );
 tl1.staggerFrom(".menu ul li", 2, {
     x: "-50%",
     ease: Expo.easeInOut,
     opacity: 0,
-}, ".4", "-=1.5");
+}, ".2", "-=1.8");
 
 tl1.reverse();
 $(document).on("click", ".burger", function () {
@@ -97,18 +97,31 @@ $("div").on("mouseleave", function () {
 const sroll = gsap.timeline({
     scrollTrigger: {
         trigger: '.section-two',
-        start: 'center center',
-        end:'bottom top',
-        // markers: true,
+        start: 'top 90%',
+        end:'bottom bottom',
+        markers: true,
     }
 })
-sroll.from('.section-two', { opacity: 0 })
-sroll.from('.text-scrolling', { opacity: 0})
-sroll.from('.rectangle', { opacity: 0 , x: '-200', duration: 1},'=-0.5')
-sroll.from('.text-sub',{x:'-100%', opacity: 0 , duration: 1},)
-sroll.from('.text-title',{y:'100%', opacity: 0 , duration: 1},'=-1')
-sroll.from('.text-desc',{x:'100%', opacity: 0 , duration: 1},'=-1.5')
-sroll.from('.text-year',{y:'200', opacity: 0 , duration: 1},'=-1')
-sroll.from('.image-one', { opacity: 0, y: '-150', duration:1}, '=-1.5')
-sroll.from('.image-two', { opacity: 0, x: '-150', duration:1},'=-1')
-sroll.from('.image-three', { opacity: 0, x: '150', duration:1},'=-1')
+sroll.from('.section-two',2.5,{ opacity: 0})
+
+sroll.from('.rectangle',{ opacity: 0, duration: 1}, '=-2')
+sroll.from('.text-sub',{y:'80', opacity: 0 , duration: 1},'-=1.5')
+sroll.from('.text-title',{y:'100%', opacity: 0 , duration: 1},'.5','-=2')
+sroll.from('.text-desc',{y:'100%', opacity: 0 , duration: 1},'1','-=1.5')
+sroll.from('.text-year',{y:'100%', opacity: 0 , duration: 1},'.5','-=1')
+sroll.from('.image-one', { opacity: 0, y: '-500', duration:1})
+sroll.from('.image-two',{ opacity: 0, x: '-350', duration:1},'2','-=1')
+sroll.from('.image-three',{ opacity: 0, x: '350', duration:1},'2','-=1')
+var sections = gsap.utils.toArray(".panel");
+const scrollhrz = gsap.timeline();
+scrollhrz.to(sections, {
+  xPercent: -100 * (sections.length - 1),
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".container",
+    pin: true,
+    scrub: 1,
+    snap: 1 / (sections.length - 1),
+    end: () => "+=" + document.querySelector(".container").offsetWidth
+  }
+});
