@@ -4,7 +4,7 @@ const tl = gsap.timeline({
 tl.to(".text-animation", { y: "0%", duration: 1, stagger: 0.5 });
 tl.to(".slider", { y: "-100%", duration: 1, delay: 0.5 });
 tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
-tl.fromTo(".img", { opacity: 0 }, { opacity: 1, duration: 1, delay: 0.2 });
+tl.fromTo(".img", { opacity: 0 , y: '100%' }, { y:'0%',opacity: 1, duration: 1, delay: 0.2 });
 tl.fromTo("nav", { opacity: 0 }, { opacity: 1, duration: 1 });
 tl.fromTo(".sroll", { opacity: 0 }, { opacity: 1, duration: 1 }, "=-1");
 tl.from(".line span", 1.8, {

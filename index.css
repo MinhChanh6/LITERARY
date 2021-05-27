@@ -116,7 +116,7 @@ section{
     width: 100px;
     border:  1px solid #faf9f9;
     border-radius: 70px;
-    bottom: -120px;
+    bottom: -100px;
     left: 650px;
 }
 .sroll::after,
